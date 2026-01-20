@@ -1,5 +1,5 @@
-from ..schemas.request import AgentRequest, TaskType
-from ..utils.logger import logger
+from schemas.request import AgentRequest, TaskType
+from utils.logger import logger
 
 class IntentAgent:
     """
