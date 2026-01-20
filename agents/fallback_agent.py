@@ -1,6 +1,6 @@
-from ..schemas.request import AgentRequest
-from ..schemas.response import AgentResponse
-from ..utils.logger import logger
+from schemas.request import AgentRequest
+from schemas.response import AgentResponse
+from utils.logger import logger
 
 class FallbackAgent:
     """
