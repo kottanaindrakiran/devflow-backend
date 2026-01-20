@@ -1,8 +1,8 @@
 from pydantic_ai import Agent
-from ..schemas.request import AgentRequest
-from ..schemas.response import AgentResponse
-from ..services.openrouter_client import get_chat_model
-from ..utils.logger import logger
+from schemas.request import AgentRequest
+from schemas.response import AgentResponse
+from services.openrouter_client import get_chat_model
+from utils.logger import logger
 
 class DebugAgent:
     def __init__(self):
