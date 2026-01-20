@@ -1,9 +1,9 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from .schemas.request import AgentRequest
-from .schemas.response import AgentResponse
-from .agents.router import AgentRouter
-from .utils.logger import logger
+from schemas.request import AgentRequest
+from schemas.response import AgentResponse
+from agents.router import AgentRouter
+from utils.logger import logger
 
 app = FastAPI(title="DevFlow AI Backend", version="1.0.0")
 
@@ -50,4 +50,5 @@ if __name__ == "__main__":
     import uvicorn
     import os
     port = int(os.getenv("PORT", 8000))
-    uvicorn.run("backend.main:app", host="0.0.0.0", port=port, reload=True)
+    # When running directly, app is just "main:app" because we are in main.py
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=True)
